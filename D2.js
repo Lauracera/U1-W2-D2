@@ -58,11 +58,11 @@ console.log(num2);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
- const totalShoppingCart = 60;
+ let totalShoppingCart = 60;
 
  if (totalShoppingCart > 50) {
-  console.log("la spedizione è gratuita")
- } else {console.log("costo della spedizone 10")};
+  console.log("La spedizione è gratuita")
+ } else {console.log("Il costo della spedizone è 10")};
 
 
 
@@ -75,6 +75,25 @@ console.log(num2);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let prod1 = 40* 0.20;
+let prod1a = 40 - prod1;
+console.log(prod1a)
+
+let prod2 = 20* 0.20;
+let prod2a = 20 - prod2
+console.log(prod2a)
+
+let somma1= prod1a + prod2a;
+console.log(somma1);
+
+let totalDiscount = somma1;
+console.log ("Sconto del 20% su ogni prodotto applicato, somma totale: ", totalDiscount);
+
+if (totalDiscount > 50) {
+  console.log("La spedizione è gratuita")
+ } else {console.log("Il costo della spedizone è 10")};
+
+
 
 
 
