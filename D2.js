@@ -5,11 +5,11 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 const numero1 = 10;
 const numero2 = 5;
-console.log(numero1 > numero2);
 
 
-
-
+if (numero1 < numero2) {console.log("numero1 è minore di numero2")}
+else if (numero2 < numero1) {console.log("numero2 è minore di numero1")}
+else {console.log("numero1 è uguale a numero2")};
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -18,7 +18,18 @@ console.log(numero1 > numero2);
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-console.log(numero1 === numero2);
+const n1 = 4
+if (n1 !== 5) {
+  console.log("Not equal")
+ } else {console.log("Equal")}
+
+
+
+
+
+
+//inutile quello che ho fatto qui a capo
+// console.log(numero1 === numero2);
 
 
 
@@ -29,11 +40,12 @@ console.log(numero1 === numero2);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let a = 5;
-let b = 15;
-let c = 15 / 5;
+const a = 5;
+const b = 15;
+const c = b / a;
 console.log (c);
 
+// oppure --> console.log(b / a)
 
 
 
@@ -43,9 +55,18 @@ console.log (c);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let num1 = 12;
-let num2 = num1 - 4;
-console.log(num2);
+const num1 = 12;
+const num2 = num1 - 4;
+const num3 = num1 + num2
+console.log(num2, num3);
+
+if (num1 === 8) {
+  console.log("Il primo numero è uguale a 8")
+} else if (num2 === 8) {
+  console.log("Il secondo numero è uguale a 8")
+} else if (num3 === 8) {
+  console.log("La somma del primo e del terzo numero è uguale a 8")
+} else { console.log("Nessun numero è uguale a 8")}
 
 
 
@@ -62,7 +83,7 @@ console.log(num2);
 
  if (totalShoppingCart > 50) {
   console.log("La spedizione è gratuita")
- } else {console.log("Il costo della spedizone è 10")};
+ } else {console.log("Il costo della spedizone è 10 €")};
 
 
 
@@ -75,11 +96,12 @@ console.log(num2);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let prod1 = 40* 0.20;
-let prod1a = 40 - prod1;
+const discount = 0.20
+let prod1 = 100* discount;
+let prod1a = 100 - prod1;
 console.log(prod1a)
 
-let prod2 = 20* 0.20;
+let prod2 = 20* discount;
 let prod2a = 20 - prod2
 console.log(prod2a)
 
@@ -87,11 +109,11 @@ let somma1= prod1a + prod2a;
 console.log(somma1);
 
 let totalDiscount = somma1;
-console.log ("Sconto del 20% su ogni prodotto applicato, somma totale: ", totalDiscount);
+console.log ("Sconto del 20% su ogni prodotto applicato, somma totale: ", totalDiscount, "€");
 
 if (totalDiscount > 50) {
   console.log("La spedizione è gratuita")
- } else {console.log("Il costo della spedizone è 10")};
+ } else {console.log("Il costo della spedizone è di 10 €")};
 
 
 
@@ -109,10 +131,6 @@ let var1 =  [4, 2, 6];
 var1.sort();
 console.log(var1);
 
-
-
-
-
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
@@ -124,7 +142,11 @@ let age1 = 24;
 console.log(typeof age1);
 console.log(name1 === age1);
 
-
+if (typeof age1 === "number"){
+  console.log ("è un numero")
+} else  {
+  console.log("non è un numero")
+}
 
 
 
@@ -134,10 +156,13 @@ console.log(name1 === age1);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let numero = 10;
-let risultato = numero % 2;
+let risultato = (numero % 2);
 
-if (risultato > 0) alert ("numero dispari");
-else alert ("numero pari");
+if (risultato > 0) {
+  console.log("Numero dispari")
+} else { console.log("numero pari")
+}
+
 console.log(risultato);
 
 
@@ -198,7 +223,7 @@ const me = {
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-me.city = "toronto";
+me.city = "Toronto";
 console.log(me);
 
 
@@ -228,8 +253,6 @@ console.log(me);
 
 
 
-
-
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
@@ -250,8 +273,11 @@ console.log (fila);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-fila.pop (10);
-console.log (fila);
+// let newFila = fila.slice(9, 1, 100)
+// serve a eliminare più elementi alla volta
 
-fila.push = 100;
-console.log (fila);
+fila.pop(10);
+console.log(fila);
+
+fila.push(100)
+console.log(fila)
