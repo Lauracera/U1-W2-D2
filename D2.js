@@ -7,9 +7,12 @@ const numero1 = 10;
 const numero2 = 5;
 
 
-if (numero1 < numero2) {console.log("numero1 è minore di numero2")}
-else if (numero2 < numero1) {console.log("numero2 è minore di numero1")}
-else {console.log("numero1 è uguale a numero2")};
+if (numero1 < numero2) {
+  console.log(numero1, " è minore di ", numero2)
+} else if (numero2 < numero1) {
+  console.log(numero2, " è minore di ", numero1)
+} else {
+  console.log(numero1, "è uguale a ", numero2)};
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -40,10 +43,15 @@ if (n1 !== 5) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const a = 5;
+// const a = 5;
 const b = 15;
-const c = b / a;
-console.log (c);
+// const c = b / a;
+// console.log (c);
+
+
+if(b % 5 === 0) {
+  console.log("Divisibile per 5")
+}
 
 // oppure --> console.log(b / a)
 
@@ -79,13 +87,36 @@ if (num1 === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
- let totalShoppingCart = 60;
+ let totalShoppingCart = 20;
+ let shipCost = 10
+ let amountT = totalShoppingCart
 
- if (totalShoppingCart > 50) {
-  console.log("La spedizione è gratuita")
- } else {console.log("Il costo della spedizone è 10 €")};
+if (totalShoppingCart > 50) {
+  console.log("La spedizione è gratuita, il conto toale è di", amountT, "€")
+ } else {amountT += shipCost,  console.log("Il costo della spedizone è",shipCost, "€ il conto totale è di", amountT,"€" )};
 
 
+
+ //Oppure
+
+ //  if (totalShoppingCart > 50) {
+//   console.log("La spedizione è gratuita")
+//  } else {amountT +=shipCost,  console.log("Il costo della spedizone è 10 €")};
+
+//  console.log("totale da pagare", amountT)
+
+ 
+ //Oppure
+
+//  let totalSh = 65
+// let shippingCost = 10
+// let amount = totalSh
+
+// if (totalSh > 50) {
+//   amount += shippingCost
+// }
+
+// console.log("totale da pagare", amount)
 
 
 
@@ -96,6 +127,20 @@ if (num1 === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+// meglio così
+let totalShoppingCart2= 65
+totalShoppingCart2 = totalShoppingCart2* 0.8
+let shippingCost2= 10
+let amountToPay2 = totalShoppingCart2
+
+if(totalShoppingCart2 < 50){
+  amountToPay2 += shippingCost2 
+}
+console.log("totale da pagare", amountToPay2)
+
+
+//vabe ci sta ma è più lungo
 const discount = 0.20
 let prod1 = 100* discount;
 let prod1a = 100 - prod1;
@@ -126,6 +171,57 @@ if (totalDiscount > 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+/*
+
+let z1 = 2
+let z2 = 11
+let z3 = 6
+
+if(z1 >= z3) {
+  if (z2 >= z1) {
+    conosle.log(z2, z1, z3)
+  } else if (z2 >= z3) {
+    console.log(z1, z2, z3)
+  } else {console.log(z1, z3, z2)}
+} even if (z2 >= z3) { 
+  console.log(z2, z3, z1)
+} 
+
+}
+*/
+
+
+let z1 = 6
+let z2 = 14
+let z3 = 10
+
+if (z1 >= z2) {
+  if (z3 >= z1) {
+    console.log(z3, z1, z2)
+  } else {
+    if (z3 >= z2) {
+      console.log(z1, z3, z2)
+    } else {
+      console.log(z1, z2, z3)
+    }
+  }
+} else {
+  if (z3 >= z2) {
+    console.log(z3, z2, z1)
+  } else {
+    if (z3 >= z1) {
+      console.log(z2, z3, z1)
+    } else {
+      console.log(z2, z1, z3)
+    }
+  }
+}
+
+
+
+
+/* NOOOOOOOOOOOOO!!!!!
 let var1 =  [4, 2, 6]; 
 
 var1.sort();
@@ -148,6 +244,15 @@ if (typeof age1 === "number"){
   console.log("non è un numero")
 }
 
+/* Oppure
+let test = "Ciao"
+
+if(typeof test === "number") {
+  console.log(test, "è un numero!")
+} else {
+  console.log(test, "non è un numero!")
+}
+
 
 
 /* ESERCIZIO 9
@@ -160,11 +265,19 @@ let risultato = (numero % 2);
 
 if (risultato > 0) {
   console.log("Numero dispari")
-} else { console.log("numero pari")
+} else { console.log("Numero pari")
 }
 
 console.log(risultato);
 
+/* oppure
+let test2 = 31
+
+if (test2 % 2 === 0) {
+  console.log("Pari")
+} else {
+  console.log("Dispari")
+}
 
 
 
@@ -248,7 +361,7 @@ console.log(me);
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-me.skills.pop('css');
+me.skills.pop('css'); //non importava inserire css tra le parentesi
 console.log(me);
 
 
@@ -260,8 +373,26 @@ console.log(me);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let fila = [];
-fila = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+fila.push[1]
+fila.push[2]
+fila.push[3]
+fila.push[4]
+fila.push[5]
+fila.push[6]
+fila.push[7]
+fila.push[8]
+fila.push[9]
+fila.push[10]
+
 console.log (fila);
+
+
+
+
+// è SBAGLIATO!!!
+// fila = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 
 
 
@@ -280,4 +411,9 @@ fila.pop(10);
 console.log(fila);
 
 fila.push(100)
+console.log(fila)
+
+//oppure se lo voi ottimizzato 
+
+fila[9] = 100
 console.log(fila)
